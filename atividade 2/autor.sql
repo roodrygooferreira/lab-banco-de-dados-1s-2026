@@ -1,6 +1,6 @@
 CREATE TABLE autor(
     id_autor int primary key auto_increment,
-    nome varchar(128) not null,
+    nome varchar(128) not null unique,
     ano_nascimento year not null,
     ano_morte year null, -- Ajustado para opcional
     apresentacao text not null,
