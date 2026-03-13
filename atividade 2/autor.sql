@@ -1,3 +1,4 @@
+use biblioteca_pessoal_1s2026;
 create table autor(
 id_autor int primary key auto_increment,
 nome varchar(128) not null,
