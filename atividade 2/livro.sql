@@ -8,7 +8,7 @@ id_categoria int,
 titulo varchar(255) not null,
 sinopse text not null,
 ano_publicacao year not null,
-lido boolean,
+lido boolean default false,
 data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
