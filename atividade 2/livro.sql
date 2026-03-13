@@ -11,8 +11,8 @@ CREATE TABLE livro(
     data_cadastro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     data_atualizacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
-    foreign key (id_usuario) references usuario(id_usuario),
-    foreign key (id_autor) references autor(id_autor),
-    foreign key (id_editora) references editora(id_editora),
-    foreign key (id_categoria) references categoria(id_categoria)
+    foreign key (id_usuario) references usuario(id_usuario) ON DELETE CASCADE,
+    foreign key (id_autor) references autor(id_autor)ON DELETE RESTRICT,
+    foreign key (id_editora) references editora(id_editora)ON DELETE RESTRICT,
+    foreign key (id_categoria) references categoria(id_categoria)ON DELETE RESTRICT
 );
